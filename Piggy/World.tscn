@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Piggy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Apple.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Piggy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 95.244, 74.211 )
+
+[node name="Apple" parent="." instance=ExtResource( 2 )]
+position = Vector2( 202.394, 50.7969 )
+
+[node name="Apple2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 212.712, 91.2756 )
+
+[node name="Apple3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 135.326, 134.135 )
+
+[node name="Apple4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 292.479, 25.3984 )
