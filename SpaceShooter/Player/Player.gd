@@ -42,6 +42,6 @@ func _on_Player_area_entered(area: Area2D) -> void:
 func _exit_tree() -> void:
 	var main = get_tree().current_scene
 	var explosion_effect = ExplosionEffect.instance()
-	main.add_child(explosion_effect)
+	main.call_deferred("add_child", explosion_effect)
 	explosion_effect.global_position = global_position
 	emit_signal("player_death")

@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
+
+[node name="TitleScreen" type="CenterContainer"]
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.160004
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 320.0
+margin_top = 147.0
+margin_right = 960.0
+margin_bottom = 481.0
+custom_constants/separation = 48
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+margin_right = 640.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 640, 128 )
+color = Color( 1, 0.988235, 0.337255, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 176.0
+margin_right = 640.0
+margin_bottom = 334.0
+custom_constants/separation = 12
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 285.0
+margin_right = 354.0
+margin_bottom = 22.0
+size_flags_horizontal = 4
+text = "Continue"
+
+[node name="Button2" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 279.0
+margin_top = 34.0
+margin_right = 361.0
+margin_bottom = 56.0
+size_flags_horizontal = 4
+text = "New Game"
+
+[node name="Button3" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 278.0
+margin_top = 68.0
+margin_right = 362.0
+margin_bottom = 90.0
+size_flags_horizontal = 4
+text = "Load Game"
+
+[node name="Button4" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 288.0
+margin_top = 102.0
+margin_right = 351.0
+margin_bottom = 124.0
+size_flags_horizontal = 4
+text = "Settings"
+
+[node name="Button5" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 291.0
+margin_top = 136.0
+margin_right = 348.0
+margin_bottom = 158.0
+size_flags_horizontal = 4
+text = "Credits"

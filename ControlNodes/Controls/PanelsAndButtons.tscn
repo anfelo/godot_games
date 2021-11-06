@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="PanelsAndButtons" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 459.367
+margin_top = 167.878
+margin_right = 838.367
+margin_bottom = 442.878
+
+[node name="Button" type="Button" parent="."]
+margin_left = 478.404
+margin_top = 186.347
+margin_right = 649.404
+margin_bottom = 256.347
+text = "SOME TEXT"
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 477.526
+margin_top = 280.225
+margin_right = 648.526
+margin_bottom = 333.225
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 477.893
+margin_top = 354.51
+margin_right = 648.893
+margin_bottom = 407.51

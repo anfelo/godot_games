@@ -1,8 +1,8 @@
 extends Node
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene("res://World.tscn")
+		var _r = get_tree().change_scene("res://World.tscn")
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()

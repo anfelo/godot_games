@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="Label" type="Label"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -178.5
+margin_top = 17.6588
+margin_right = -21.5
+margin_bottom = 46.6588
+grow_horizontal = 0
+text = "Score : 100"
+align = 2
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

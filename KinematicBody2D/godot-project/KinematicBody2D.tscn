@@ -1,0 +1,76 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://addons/node-essential-helpers/DemoScreen.gd" type="Script" id=1]
+[ext_resource path="res://addons/node-essential-helpers/DemoScreenNavigator.gd" type="Script" id=2]
+[ext_resource path="res://KinematicBody2D/SideScrollMovement/SideScrollMovement.tscn" type="PackedScene" id=3]
+[ext_resource path="res://common/Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://common/UI/UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://KinematicBody2D/Stomp/StompMechanic.tscn" type="PackedScene" id=6]
+[ext_resource path="res://KinematicBody2D/MovingPlatforms/MovingPlatforms.tscn" type="PackedScene" id=7]
+[ext_resource path="res://KinematicBody2D/RotatingPlatforms/RotatingPlatforms.tscn" type="PackedScene" id=8]
+[ext_resource path="res://KinematicBody2D/WallSlideAndJump/WallSlideAndJump.tscn" type="PackedScene" id=9]
+[ext_resource path="res://KinematicBody2D/PushRigidBodies/PushRigidBodies.tscn" type="PackedScene" id=10]
+[ext_resource path="res://KinematicBody2D/PassThroughMechanics/PassThroughMechanics.tscn" type="PackedScene" id=11]
+[ext_resource path="res://KinematicBody2D/TopdownMovement/TopdownMovement.tscn" type="PackedScene" id=12]
+[ext_resource path="res://KinematicBody2D/TopDownPushMovement/TopDownPushMovement.tscn" type="PackedScene" id=13]
+
+[node name="KinematicBody2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="SideScrollMovement" type="Node2D" parent="."]
+script = ExtResource( 1 )
+scene = ExtResource( 3 )
+text = "KinematicBodies handle collisions allowing for the implementation of custom physics. They are excellent for side-scroll character controllers."
+
+[node name="StompMechanic" type="Node2D" parent="."]
+position = Vector2( 1896, 0 )
+script = ExtResource( 1 )
+scene = ExtResource( 6 )
+text = "KinematicBodies allow us to access collision's data, such as the normal and the collider.
+Like for this stomp mechanic."
+
+[node name="MovingPlatforms" type="Node2D" parent="."]
+position = Vector2( 3800, 0 )
+script = ExtResource( 1 )
+scene = ExtResource( 7 )
+text = "KinematicBodies can be used for any collision body that moves in the game. This includes moving platforms."
+
+[node name="RotatingBodies" type="Node2D" parent="."]
+position = Vector2( 8, 1120 )
+script = ExtResource( 1 )
+scene = ExtResource( 8 )
+text = "Using Sync to Physics also works for angular movement, such as opening bridges and spinning platforms."
+
+[node name="WallSlideAndJump" type="Node2D" parent="."]
+position = Vector2( 1896, 1120 )
+script = ExtResource( 1 )
+scene = ExtResource( 9 )
+text = "Another good use case for KinematicBodies is to detect motion relative collisions, such as detecting walls, ceilling, and floor. Excellent for wall sliding and wall jump."
+
+[node name="PassThroughMechanics" type="Node2D" parent="."]
+position = Vector2( 3804.8, 1120 )
+script = ExtResource( 1 )
+scene = ExtResource( 11 )
+text = "By manipulating KinematicBody2D's collision masks we can pass through platforms. Press down and jump together to fall."
+
+[node name="PushRigidBodies" type="Node2D" parent="."]
+position = Vector2( 8, 2264.8 )
+script = ExtResource( 1 )
+scene = ExtResource( 10 )
+text = "KinematicBody2Ds can also interact with RIgidBody2Ds. For instace, for a push/pull interaction, we can disable the KinematicBody infinite inertia and apply an impulse to the RigidBody upon contact."
+
+[node name="TopdownMovement" type="Node2D" parent="."]
+position = Vector2( 1997.89, 2300.67 )
+script = ExtResource( 1 )
+scene = ExtResource( 12 )
+text = "The move_and_slide() method is also useful for topdown movement. When the KinematicBody2D collides with an obstacle, it will slide alway from it avoiding getting stuck."
+
+[node name="TopDownPushMovement" type="Node2D" parent="."]
+position = Vector2( 3804.8, 2300.67 )
+script = ExtResource( 1 )
+scene = ExtResource( 13 )
+text = "KinematicBody2Ds can also interact with each other and apply forces. For instance, we can use the `move_and_slide()` on colliders that are in the \"rock\" group so our player can push them."
+
+[node name="UI" parent="." instance=ExtResource( 5 )]
+
+[node name="Background" parent="." instance=ExtResource( 4 )]

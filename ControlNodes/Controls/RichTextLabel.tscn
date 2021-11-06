@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="RichTextLabel" type="RichTextLabel"]
+margin_left = 399.186
+margin_top = 229.968
+margin_right = 901.186
+margin_bottom = 380.968
+__meta__ = {
+"_edit_use_anchors_": false
+}
